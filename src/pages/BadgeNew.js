@@ -1,9 +1,11 @@
 import React from 'react';
 import Badge from '../components/Badge'
+import Navbar from '../components/Navbar'
+import BadgeForm from '../components/BadgeForm'
 
 import './styles/BadgeNew.css'
 import header from '../images/badge-header.svg'
-import Navbar from '../components/Navbar'
+
 
 class BadgeNew extends React.Component {
     render() {
@@ -16,8 +18,17 @@ class BadgeNew extends React.Component {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col">
-                            <Badge avatarUrl="http://www.gravatar.com/avatar/?d=identicon" firstName="Jose" lastName="Uribe" jobTitle="FrontEnd Developer" twitter="joseuribeh" />
+                        <div className="col-6">
+                            <Badge 
+                            avatarUrl="http://www.gravatar.com/avatar/?d=identicon" 
+                            firstName="Jose" 
+                            lastName="Uribe" 
+                            jobTitle="FrontEnd Developer" 
+                            twitter="joseuribeh" />
+                        </div>
+                        
+                        <div className="col-6">
+                            <BadgeForm />
                         </div>
                     </div>
                 </div>
