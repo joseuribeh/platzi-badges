@@ -30,7 +30,7 @@ class BadgesListItem extends Component {
     }
   }
   
-class BadgesList extends Component {
+class BadgesList extends Component { 
     render() {
       if (this.props.badges.length === 0) {
         return (
@@ -45,11 +45,13 @@ class BadgesList extends Component {
       
       return (
         <div className="BadgesList">
-          <ul className="list-unstyled">
+          <ul className="list-unstyled Badge__list">
             {this.props.badges.map(badge => {
               return (
-                <li key={badge.id}>
+                <li>
+                <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`} >
                   <BadgesListItem badge={badge} />
+                </Link>
                 </li>
               );
             })}

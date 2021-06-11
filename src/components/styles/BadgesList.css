@@ -2,6 +2,11 @@
     padding-right: 1rem;
   }
 
+.Badge__list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .BadgesList ul>li {
     margin-bottom: 1rem;
   }
