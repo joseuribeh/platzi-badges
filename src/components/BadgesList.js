@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom'
 
 import tw_logo from '../images/twitter.svg'
 import './styles/BadgesList.css'
+import Gravatar from './Gravatar'
 
 class BadgesListItem extends Component {
     render() {
       return (
         <div className="BadgesListItem">
-          <img
-            className="BadgesListItem__avatar"
-            src={this.props.badge.avatarUrl}
-            alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
-          />
+
+            <Gravatar 
+              className='Badge__avatar'
+              email={this.props.badge.email}
+              alt='Avatar'
+            />
   
           <div>
             <strong>
