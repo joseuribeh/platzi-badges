@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import BadgesList from '../components/BadgesList'
+import PageLoading from '../components/PageLoading'
+import PageError from '../components/PageError'
+
 
 import confLogo from '../images/badge-header.svg'
 import './styles/Badges.css'
@@ -34,11 +37,11 @@ export class Badges extends Component {
     render() {
 
         if (this.state.loading === true) {
-            return 'Loading...';
+            return <PageLoading />
         }
 
         if (this.state.error) {
-            return 'Error: ${this.state.error.message}';
+            return <PageError />;
         }
 
         return (
